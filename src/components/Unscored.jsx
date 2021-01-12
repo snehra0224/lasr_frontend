@@ -29,19 +29,19 @@ class Unscored extends Component{
         this.setState({
           isCompleted: true
         })
-        Axios.post(`http://localhost:4000/api/insertSystemEngagement`, {idString: this.props.idString, json: results})
+        Axios.post(`/api/insertSystemEngagement`, {idString: this.props.idString, json: results})
         .then(() => {
           alert("Insert successful");
         });
-        Axios.post(`http://localhost:4000/api/insertBehaviors`, {idString: this.props.idString, json: results['Behaviors']})
+        Axios.post(`/api/insertBehaviors`, {idString: this.props.idString, json: results['Behaviors']})
         .then(() => {
           alert("Insert successful");
         });
-        Axios.post(`http://localhost:4000/api/insertPsych`, {idString: this.props.idString, json: results['Psych']})
+        Axios.post(`/api/insertPsych`, {idString: this.props.idString, json: results['Psych']})
         .then(() => {
           alert("Insert successful");
         });
-        Axios.post(`http://localhost:4000/api/insertPhys`, {idString: this.props.idString, json: results['Phys']})
+        Axios.post(`/api/insertPhys`, {idString: this.props.idString, json: results['Phys']})
         .then(() => {
           alert("Insert successful");
         });
